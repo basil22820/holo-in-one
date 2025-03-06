@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- منع المتصفح من تخزين الصفحة في الذاكرة المؤقتة -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+    <title>تسجيل الدخول</title>
+</head>
+<body>
+    <h2>سجل الدخول للوصول للموقع</h2>
+    <form id="loginForm">
+        <!-- تم تغيير نوع الحقل إلى "text" وإزالته الزائدة -->
+        <input type="text" id="username" placeholder="أدخل أي شيء" required>
+        <button type="submit">دخول</button>
+    </form>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // إيقاف الإرسال الافتراضي للنموذج
+            
+            const username = document.getElementById('username').value;
+            
+            if (username.trim() !== '') {
+                // حفظ الحالة في localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                // تأكيد التوجيه إلى index.html
+                window.location.href = 'index.html'; 
+            }
+        });
+    </script>
+</body>
+</html>

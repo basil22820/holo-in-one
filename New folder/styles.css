@@ -1,0 +1,344 @@
+:root {
+    --primary-color: #130924;
+    --secondary-color: #fb036b;
+    --accent-color: #fb036b;
+    --text-color: #fb036b;
+    --text-light: #ffffff;
+    --text-white: #ffffff;
+    --background-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --header-bg: #fb036b;
+    --success-color: #fb036b;
+    --warning-color: #fb036b;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 16px;
+    --border-radius-sm: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* تنسيقات صفحة الحزم */
+.packages {
+    padding: 6rem 0;
+    background-color: var(--background-color);
+}
+
+.packages-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.packages .section-description {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.package-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.package-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    padding: 2rem;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.package-badge {
+    background: var(--secondary-color);
+    color: var(--light-text);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.package-content {
+    padding: 2rem;
+}
+
+.package-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.package-features li {
+    margin-bottom: 1rem;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.package-features li::before {
+    content: '✓';
+    color: var(--accent-color);
+    position: absolute;
+    right: 0;
+}
+
+.book-button,
+.contact-button,
+.submit-button {
+    background: var(--secondary-color);
+    color: var(--light-text);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.book-button:hover,
+.contact-button:hover,
+.submit-button:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.custom-package {
+    text-align: center;
+    padding: 3rem;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+
+.custom-package h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.custom-package p {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .packages-hero h1 {
+        font-size: 2rem;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* تنسيقات معلومات الحزم */
+.package-info {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+}
+
+.package-info h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.info-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card ul li {
+    margin-bottom: 0.8rem;
+    padding-right: 1.2rem;
+    position: relative;
+}
+
+.info-card ul li::before {
+    content: '•';
+    color: var(--accent-color);
+    position: absolute;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: saturate(180%) blur(10px);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5px;
+    z-index: 10;
+    color: whitesmoke;
+}
+
+.logo {
+    font-family: var(--ff-rubik-dirt);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    padding: 0 1.2rem;
+    font-weight: 300;
+    color: rgb(254, 252, 252);
+
+
+}
+
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    font-family: var(--ff-montserrat);
+    margin: 0px 15px;
+}
+
+.nav-links li a {
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.header-content {
+    font-family: var(--ff-lora);
+    letter-spacing: 0.5rem;
+    color: whitesmoke;
+    text-align: center;
+    z-index: 1;
+    padding: 4rem;
+    margin-bottom: 150px;
+}
+
+.header-content a {
+    letter-spacing: 0.1rem;
+}
+
+.header-content h2 {
+    font-size: 4vmin;
+}
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: #fc036b;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.header-content h1 {
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.ctn {
+    font-family: var(--ff-montserrat);
+    font-size: var(--fs-links-btns);
+    font-weight: 700;
+    padding: 13px 50px;
+    background: #fc036b;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
